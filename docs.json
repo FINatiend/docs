@@ -1,6 +1,15 @@
 {
+  "$schema": "https://mintlify.com/docs.json",
   "name": "FastMCP Documentation",
-  "navigation": [
-    { "group": "Updates", "pages": ["changelog"] }
-  ]
+  "theme": "aspen",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Updates",
+        "groups": [
+          { "group": "Changelog", "pages": ["changelog"] }
+        ]
+      }
+    ]
+  }
 }
