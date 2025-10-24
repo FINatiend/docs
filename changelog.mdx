@@ -1,13 +1,15 @@
 ---
-title: "FastMCP Changelog"
-description: "Release notes and version history for FastMCP"
+description: "FastMCP 2.12.5 is a point release that pins the MCP SDK version below 1.17, which introduced a change affecting FastMCP users with auth providers mounted as part of a larger application. This ensures the `.well-known` payload appears in the expected location when using FastMCP authentication providers with composite applications."
+title: "FastMCP  doc"
 ---
 
+`````
 # Changelog
 Source: https://gofastmcp.com/changelog
 
 
 
+<Update label="v2.12.5" description="2025-10-17">
   **[v2.12.5: Safety Pin](https://github.com/jlowin/fastmcp/releases/tag/v2.12.5)**
 
   FastMCP 2.12.5 is a point release that pins the MCP SDK version below 1.17, which introduced a change affecting FastMCP users with auth providers mounted as part of a larger application. This ensures the `.well-known` payload appears in the expected location when using FastMCP authentication providers with composite applications.
@@ -19,7 +21,9 @@ Source: https://gofastmcp.com/changelog
   * Pin MCP SDK version below 1.17 by [@jlowin](https://github.com/jlowin) in [a1b2c3d](https://github.com/jlowin/fastmcp/commit/dab2b316ddc3883b7896a86da21cacb68da01e5c)
 
   **Full Changelog**: [v2.12.4...v2.12.5](https://github.com/jlowin/fastmcp/compare/v2.12.4...v2.12.5)
+</Update>
 
+<Update label="v2.12.4" description="2025-09-26">
   **[v2.12.4: OIDC What You Did There](https://github.com/jlowin/fastmcp/releases/tag/v2.12.4)**
 
   FastMCP 2.12.4 adds comprehensive OIDC support and expands authentication options with AWS Cognito and Descope providers. The release also includes improvements to logging middleware, URL handling for nested resources, persistent OAuth client registration storage, and various fixes to the experimental OpenAPI parser.
@@ -98,7 +102,9 @@ Source: https://gofastmcp.com/changelog
   * [@cclauss](https://github.com/cclauss) made their first contribution in [#1922](https://github.com/jlowin/fastmcp/pull/1922)
 
   **Full Changelog**: [v2.12.3...v2.12.4](https://github.com/jlowin/fastmcp/compare/v2.12.3...v2.12.4)
+</Update>
 
+<Update label="v2.12.3" description="2025-09-17">
   **[v2.12.3: Double Time](https://github.com/jlowin/fastmcp/releases/tag/v2.12.3)**
 
   FastMCP 2.12.3 focuses on performance and developer experience improvements based on community feedback. This release includes optimized auth provider imports that reduce server startup time, enhanced OIDC authentication flows with proper token management, and several reliability fixes for OAuth proxy configurations. The addition of automatic inline snapshot creation significantly improves the testing experience for contributors.
@@ -149,7 +155,9 @@ Source: https://gofastmcp.com/changelog
   * [@ruhulio](https://github.com/ruhulio) made their first contribution in [#1817](https://github.com/jlowin/fastmcp/pull/1817)
 
   **Full Changelog**: [v2.12.2...v2.12.3](https://github.com/jlowin/fastmcp/compare/v2.12.2...v2.12.3)
+</Update>
 
+<Update label="v2.12.2" description="2025-09-03">
   **[v2.12.2: Perchance to Stream](https://github.com/jlowin/fastmcp/releases/tag/v2.12.2)**
 
   This is a hotfix for a bug where the `streamable-http` transport was not recognized as a valid option in `fastmcp.json` configuration files, despite being supported by the CLI. This resulted in a parsing error when the CLI arguments were merged against the configuration spec.
@@ -161,7 +169,9 @@ Source: https://gofastmcp.com/changelog
   * Fix streamable-http transport validation in fastmcp.json config by [@jlowin](https://github.com/jlowin) in [#1739](https://github.com/jlowin/fastmcp/pull/1739)
 
   **Full Changelog**: [v2.12.1...v2.12.2](https://github.com/jlowin/fastmcp/compare/v2.12.1...v2.12.2)
+</Update>
 
+<Update label="v2.12.1" description="2025-09-03">
   **[v2.12.1: OAuth to Joy](https://github.com/jlowin/fastmcp/releases/tag/v2.12.1)**
 
   FastMCP 2.12.1 strengthens the OAuth proxy implementation based on extensive community testing and feedback. This release improves client storage reliability, adds PKCE forwarding for enhanced security, introduces configurable token endpoint authentication methods, and expands scope handling—all addressing real-world integration challenges discovered since 2.12.0. The enhanced test suite with mock providers ensures these improvements are robust and maintainable.
@@ -206,7 +216,9 @@ Source: https://gofastmcp.com/changelog
   * [@seanpwlms](https://github.com/seanpwlms) made their first contribution in [#1433](https://github.com/jlowin/fastmcp/pull/1433)
 
   **Full Changelog**: [v2.12.0...v2.12.1](https://github.com/jlowin/fastmcp/compare/v2.12.0...v2.12.1)
+</Update>
 
+<Update label="v2.12.0" description="2025-08-31">
   **[v2.12.0: Auth to the Races](https://github.com/jlowin/fastmcp/releases/tag/v2.12.0)**
 
   FastMCP 2.12 represents one of our most significant releases to date, both in scope and community involvement. After extensive testing and iteration with the community, we're shipping major improvements to authentication, configuration, and MCP feature adoption.
@@ -346,7 +358,9 @@ Source: https://gofastmcp.com/changelog
   * [@romanusyk](https://github.com/romanusyk) made their first contribution in [#1667](https://github.com/jlowin/fastmcp/pull/1667)
 
   **Full Changelog**: [v2.11.3...v2.12.0](https://github.com/jlowin/fastmcp/compare/v2.11.3...v2.12.0)
+</Update>
 
+<Update label="v2.11.3" description="2025-08-11">
   **[v2.11.3: API-tite for Change](https://github.com/jlowin/fastmcp/releases/tag/v2.11.3)**
 
   This release includes significant enhancements to the experimental OpenAPI parser and fixes a significant bug that led schemas not to be included in input/output schemas if they were transitive dependencies (e.g. A → B → C implies A depends on C). For users naively transforming large OpenAPI specs into MCP servers, this may result in ballooning payload sizes and necessitate curation.
@@ -397,7 +411,9 @@ Source: https://gofastmcp.com/changelog
   * [@yannj-fr](https://github.com/yannj-fr) made their first contribution in [#1371](https://github.com/jlowin/fastmcp/pull/1371)
 
   **Full Changelog**: [v2.11.2...v2.11.3](https://github.com/jlowin/fastmcp/compare/v2.11.2...v2.11.3)
+</Update>
 
+<Update label="v2.11.2" description="2025-08-06">
   ## [v2.11.2: Satis-factory](https://github.com/jlowin/fastmcp/releases/tag/v2.11.2)
 
   ## What's Changed
@@ -422,7 +438,9 @@ Source: https://gofastmcp.com/changelog
   * [@bianning](https://github.com/bianning) made their first contribution in [#1375](https://github.com/jlowin/fastmcp/pull/1375)
 
   **Full Changelog**: [v2.11.1...v2.11.2](https://github.com/jlowin/fastmcp/compare/v2.11.1...v2.11.2)
+</Update>
 
+<Update label="v2.11.1" description="2025-08-04">
   ## [v2.11.1: You're Better Auth Now](https://github.com/jlowin/fastmcp/releases/tag/v2.11.1)
 
   ## What's Changed
@@ -452,7 +470,9 @@ Source: https://gofastmcp.com/changelog
   * [@Ozzuke](https://github.com/Ozzuke) made their first contribution in [#1344](https://github.com/jlowin/fastmcp/pull/1344)
 
   **Full Changelog**: [v2.11.0...v2.11.1](https://github.com/jlowin/fastmcp/compare/v2.11.0...v2.11.1)
+</Update>
 
+<Update label="v2.11.0" description="2025-08-01">
   ## [v2.11.0: Auth to a Good Start](https://github.com/jlowin/fastmcp/releases/tag/v2.11.0)
 
   FastMCP 2.11 doubles down on what developers need most: speed and simplicity. This massive release delivers significant performance improvements and a dramatically better developer experience.
@@ -566,7 +586,9 @@ Source: https://gofastmcp.com/changelog
   * [@cjermain](https://github.com/cjermain) made their first contribution in [#1326](https://github.com/jlowin/fastmcp/pull/1326)
 
   **Full Changelog**: [v2.10.6...v2.11.0](https://github.com/jlowin/fastmcp/compare/v2.10.6...v2.11.0)
+</Update>
 
+<Update label="v2.10.6" description="2025-07-19">
   ## [v2.10.6: Hymn for the Weekend](https://github.com/jlowin/fastmcp/releases/tag/v2.10.6)
 
   A special Saturday release with many fixes.
@@ -617,7 +639,9 @@ Source: https://gofastmcp.com/changelog
   * [@artificial-aidan](https://github.com/artificial-aidan) made their first contribution in [#1147](https://github.com/jlowin/fastmcp/pull/1147)
 
   **Full Changelog**: [v2.10.5...v2.10.6](https://github.com/jlowin/fastmcp/compare/v2.10.5...v2.10.6)
+</Update>
 
+<Update label="v2.10.5" description="2025-07-11">
   ## [v2.10.5: Middle Management](https://github.com/jlowin/fastmcp/releases/tag/v2.10.5)
 
   A maintenance release focused on OpenAPI refinements and middleware fixes, plus console improvements.
@@ -653,7 +677,9 @@ Source: https://gofastmcp.com/changelog
   * [@MagnusS0](https://github.com/MagnusS0) made their first contribution in [#1119](https://github.com/jlowin/fastmcp/pull/1119)
 
   **Full Changelog**: [v2.10.4...v2.10.5](https://github.com/jlowin/fastmcp/compare/v2.10.4...v2.10.5)
+</Update>
 
+<Update label="v2.10.4" description="2025-07-09">
   ## [v2.10.4: Transport-ation](https://github.com/jlowin/fastmcp/releases/tag/v2.10.4)
 
   A quick fix to ensure the CLI accepts "streamable-http" as a valid transport option.
@@ -665,7 +691,9 @@ Source: https://gofastmcp.com/changelog
   * Ensure the CLI accepts "streamable-http" as a valid transport by [@jlowin](https://github.com/jlowin) in [#1099](https://github.com/jlowin/fastmcp/pull/1099)
 
   **Full Changelog**: [v2.10.3...v2.10.4](https://github.com/jlowin/fastmcp/compare/v2.10.3...v2.10.4)
+</Update>
 
+<Update label="v2.10.3" description="2025-07-09">
   ## [v2.10.3: CLI Me a River](https://github.com/jlowin/fastmcp/releases/tag/v2.10.3)
 
   A major CLI overhaul featuring a complete refactor from typer to cyclopts, new IDE integrations, and comprehensive OpenAPI improvements.
@@ -715,7 +743,9 @@ Source: https://gofastmcp.com/changelog
   * [@dimitribarbot](https://github.com/dimitribarbot) made their first contribution in [#1092](https://github.com/jlowin/fastmcp/pull/1092)
 
   **Full Changelog**: [v2.10.2...v2.10.3](https://github.com/jlowin/fastmcp/compare/v2.10.2...v2.10.3)
+</Update>
 
+<Update label="v2.10.2" description="2025-07-05">
   ## [v2.10.2: Forward March](https://github.com/jlowin/fastmcp/releases/tag/v2.10.2)
 
   The headline feature of this release is the ability to "forward" advanced MCP interactions like logging, progress, and elicitation through proxy servers. If the remote server requests an elicitation, the proxy client will pass that request to the new, "ultimate" client.
@@ -758,7 +788,9 @@ Source: https://gofastmcp.com/changelog
   * [@thap2331](https://github.com/thap2331) made their first contribution in [#1017](https://github.com/jlowin/fastmcp/pull/1017)
 
   **Full Changelog**: [v2.10.1...v2.10.2](https://github.com/jlowin/fastmcp/compare/v2.10.1...v2.10.2)
+</Update>
 
+<Update label="v2.10.1" description="2025-07-02">
   ## [v2.10.1: Revert to Sender](https://github.com/jlowin/fastmcp/releases/tag/v2.10.1)
 
   A quick patch to revert the CLI banner that was added in v2.10.0.
@@ -771,7 +803,9 @@ Source: https://gofastmcp.com/changelog
   * Revert "Add CLI banner" by [@jlowin](https://github.com/jlowin) in [#1011](https://github.com/jlowin/fastmcp/pull/1011)
 
   **Full Changelog**: [v2.10.0...v2.10.1](https://github.com/jlowin/fastmcp/compare/v2.10.0...v2.10.1)
+</Update>
 
+<Update label="v2.10.0" description="2024-07-01">
   ## [v2.10.0: Great Spec-tations](https://github.com/jlowin/fastmcp/releases/tag/v2.10.0)
 
   FastMCP 2.10 brings full compliance with the 6/18/2025 MCP spec update, introducing elicitation support for dynamic server-client communication and output schemas for structured tool responses. Please note that due to these changes, this release also includes a breaking change to the return signature of `client.call_tool()`.
@@ -839,7 +873,9 @@ Source: https://gofastmcp.com/changelog
   * [@sstene1](https://github.com/sstene1) made their first contribution in [#997](https://github.com/jlowin/fastmcp/pull/997)
 
   **Full Changelog**: [v2.9.2...v2.10.0](https://github.com/jlowin/fastmcp/compare/v2.9.2...v2.10.0)
+</Update>
 
+<Update label="v2.9.2" description="2024-06-26">
   ## [v2.9.2: Safety Pin](https://github.com/jlowin/fastmcp/releases/tag/v2.9.2)
 
   This is a patch release to pin `mcp` below 1.10, which includes changes related to the 6/18/2025 MCP spec update and could potentially break functionality for some FastMCP users.
@@ -855,7 +891,9 @@ Source: https://gofastmcp.com/changelog
   * Pin mcp dependency by [@jlowin](https://github.com/jlowin) in [#962](https://github.com/jlowin/fastmcp/pull/962)
 
   **Full Changelog**: [v2.9.1...v2.9.2](https://github.com/jlowin/fastmcp/compare/v2.9.1...v2.9.2)
+</Update>
 
+<Update label="v2.9.1" description="2024-06-26">
   ## [v2.9.1: Call Me Maybe](https://github.com/jlowin/fastmcp/releases/tag/v2.9.1)
 
   FastMCP 2.9.1 introduces automatic MCP list change notifications, allowing servers to notify clients when tools, resources, or prompts are dynamically updated. This enables more responsive and adaptive MCP integrations.
@@ -893,7 +931,9 @@ Source: https://gofastmcp.com/changelog
   * [@rajephon](https://github.com/rajephon) made their first contribution in [#957](https://github.com/jlowin/fastmcp/pull/957)
 
   **Full Changelog**: [v2.9.0...v2.9.1](https://github.com/jlowin/fastmcp/compare/v2.9.0...v2.9.1)
+</Update>
 
+<Update label="v2.9.0" description="2024-06-23">
   ## [v2.9.0: Stuck in the Middleware With You](https://github.com/jlowin/fastmcp/releases/tag/v2.9.0)
 
   FastMCP 2.9 introduces two important features that push beyond the basic MCP protocol: MCP Middleware and server-side type conversion.
@@ -964,7 +1004,9 @@ Source: https://gofastmcp.com/changelog
   * [@Jason-CKY](https://github.com/Jason-CKY) made their first contribution in [#906](https://github.com/jlowin/fastmcp/pull/906)
 
   **Full Changelog**: [v2.8.1...v2.9.0](https://github.com/jlowin/fastmcp/compare/v2.8.1...v2.9.0)
+</Update>
 
+<Update label="v2.8.1" description="2024-06-15">
   ## [v2.8.1: Sound Judgement](https://github.com/jlowin/fastmcp/releases/tag/v2.8.1)
 
   2.8.1 introduces audio support, as well as minor fixes and updates for deprecated features.
@@ -1006,7 +1048,9 @@ Source: https://gofastmcp.com/changelog
   * Fix install link in readme by [@jlowin](https://github.com/jlowin) in [#836](https://github.com/jlowin/fastmcp/pull/836)
 
   **Full Changelog**: [v2.8.0...v2.8.1](https://github.com/jlowin/fastmcp/compare/v2.8.0...v2.8.1)
+</Update>
 
+<Update label="v2.8.0" description="2024-06-10">
   ## [v2.8.0: Transform and Roll Out](https://github.com/jlowin/fastmcp/releases/tag/v2.8.0)
 
   FastMCP 2.8.0 introduces powerful new ways to customize and control your MCP servers!
@@ -1084,7 +1128,9 @@ Source: https://gofastmcp.com/changelog
   * [@JeremyCraigMartinez](https://github.com/JeremyCraigMartinez) made their first contribution in [#787](https://github.com/jlowin/fastmcp/pull/787)
 
   **Full Changelog**: [v2.7.1...v2.8.0](https://github.com/jlowin/fastmcp/compare/v2.7.1...v2.8.0)
+</Update>
 
+<Update label="v2.7.1" description="2024-06-08">
   ## [v2.7.1: The Bearer Necessities](https://github.com/jlowin/fastmcp/releases/tag/v2.7.1)
 
   This release primarily contains a fix for parsing string tokens that are provided to FastMCP clients.
@@ -1118,7 +1164,9 @@ Source: https://gofastmcp.com/changelog
   * [@danb27](https://github.com/danb27) made their first contribution in [#752](https://github.com/jlowin/fastmcp/pull/752)
 
   **Full Changelog**: [v2.7.0...v2.7.1](https://github.com/jlowin/fastmcp/compare/v2.7.0...v2.7.1)
+</Update>
 
+<Update label="v2.7.0" description="2024-06-05">
   ## [v2.7.0: Pare Programming](https://github.com/jlowin/fastmcp/releases/tag/v2.7.0)
 
   This is primarily a housekeeping release to remove or deprecate cruft that's accumulated since v1. Primarily, this release refactors FastMCP's internals in preparation for features planned in the next few major releases. However please note that as a result, this release has some minor breaking changes (which is why it's 2.7, not 2.6.2, in accordance with repo guidelines) though not to the core user-facing APIs.
@@ -1157,7 +1205,9 @@ Source: https://gofastmcp.com/changelog
   ```
 
   **Full Changelog**: [v2.6.2...v2.7.0](https://github.com/jlowin/fastmcp/compare/v2.6.2...v2.7.0)
+</Update>
 
+<Update label="v2.6.1" description="2024-06-03">
   ## [v2.6.1: Blast Auth (second ignition)](https://github.com/jlowin/fastmcp/releases/tag/v2.6.1)
 
   This is a patch release to restore py.typed in #686.
@@ -1180,7 +1230,9 @@ Source: https://gofastmcp.com/changelog
   * [@yrangana](https://github.com/yrangana) made their first contribution in [#684](https://github.com/jlowin/fastmcp/pull/684)
 
   **Full Changelog**: [v2.6.0...v2.6.1](https://github.com/jlowin/fastmcp/compare/v2.6.0...v2.6.1)
+</Update>
 
+<Update label="v2.6.0" description="2024-06-02">
   ## [v2.6.0: Blast Auth](https://github.com/jlowin/fastmcp/releases/tag/v2.6.0)
 
   ### New Features 🎉
@@ -1219,7 +1271,9 @@ Source: https://gofastmcp.com/changelog
   * [@mjkaye](https://github.com/mjkaye) made their first contribution in [#657](https://github.com/jlowin/fastmcp/pull/657)
 
   **Full Changelog**: [v2.5.2...v2.6.0](https://github.com/jlowin/fastmcp/compare/v2.5.2...v2.6.0)
+</Update>
 
+<Update label="v2.5.2" description="2024-05-29">
   ## [v2.5.2: Stayin' Alive](https://github.com/jlowin/fastmcp/releases/tag/v2.5.2)
 
   ### New Features 🎉
@@ -1250,7 +1304,9 @@ Source: https://gofastmcp.com/changelog
   * [@ksawaray](https://github.com/ksawaray) made their first contribution in [#625](https://github.com/jlowin/fastmcp/pull/625)
 
   **Full Changelog**: [v2.5.1...v2.5.2](https://github.com/jlowin/fastmcp/compare/v2.5.1...v2.5.2)
+</Update>
 
+<Update label="v2.5.1" description="2024-05-24">
   ## [v2.5.1: Route Awakening (Part 2)](https://github.com/jlowin/fastmcp/releases/tag/v2.5.1)
 
   ### Fixes 🐞
@@ -1262,7 +1318,9 @@ Source: https://gofastmcp.com/changelog
   * Fix redundant section of docs by [@jlowin](https://github.com/jlowin) in [#583](https://github.com/jlowin/fastmcp/pull/583)
 
   **Full Changelog**: [v2.5.0...v2.5.1](https://github.com/jlowin/fastmcp/compare/v2.5.0...v2.5.1)
+</Update>
 
+<Update label="v2.5.0" description="2024-05-24">
   ## [v2.5.0: Route Awakening](https://github.com/jlowin/fastmcp/releases/tag/v2.5.0)
 
   This release introduces completely new tools for generating and customizing MCP servers from OpenAPI specs and FastAPI apps, including popular requests like mechanisms for determining what routes map to what MCP components; renaming routes; and customizing the generated MCP components.
@@ -1291,7 +1349,9 @@ Source: https://gofastmcp.com/changelog
   * Bump 2.3.6 references to 2.4.0 by [@jlowin](https://github.com/jlowin) in [#567](https://github.com/jlowin/fastmcp/pull/567)
 
   **Full Changelog**: [v2.4.0...v2.5.0](https://github.com/jlowin/fastmcp/compare/v2.4.0...v2.5.0)
+</Update>
 
+<Update label="v2.4.0" description="2024-05-21">
   ## [v2.4.0: Config and Conquer](https://github.com/jlowin/fastmcp/releases/tag/v2.4.0)
 
   **Note**: this release includes a backwards-incompatible change to how resources are prefixed when mounted in composed servers. However, it is only backwards-incompatible if users were running tests or manually loading resources by prefixed key; LLMs should not have any issue discovering the new route. See [Resource Prefix Formats](https://gofastmcp.com/servers/composition#resource-prefix-formats) for more.
@@ -1321,7 +1381,9 @@ Source: https://gofastmcp.com/changelog
   * better error when missing lifespan by [@zzstoatzz](https://github.com/zzstoatzz) in [#521](https://github.com/jlowin/fastmcp/pull/521)
 
   **Full Changelog**: [v2.3.5...v2.4.0](https://github.com/jlowin/fastmcp/compare/v2.3.5...v2.4.0)
+</Update>
 
+<Update label="v2.3.5" description="2024-05-20">
   ## [v2.3.5: Making Progress](https://github.com/jlowin/fastmcp/releases/tag/v2.3.5)
 
   ### New Features 🎉
@@ -1369,7 +1431,9 @@ Source: https://gofastmcp.com/changelog
   * [@ZiadAmerr](https://github.com/ZiadAmerr) made their first contribution in [#502](https://github.com/jlowin/fastmcp/pull/502)
 
   **Full Changelog**: [v2.3.4...v2.3.5](https://github.com/jlowin/fastmcp/compare/v2.3.4...v2.3.5)
+</Update>
 
+<Update label="v2.3.4" description="2024-05-15">
   ## [v2.3.4: Error Today, Gone Tomorrow](https://github.com/jlowin/fastmcp/releases/tag/v2.3.4)
 
   ### New Features 🎉
@@ -1406,7 +1470,9 @@ Source: https://gofastmcp.com/changelog
   * [@davenpi](https://github.com/davenpi) made their first contribution in [#437](https://github.com/jlowin/fastmcp/pull/437)
 
   **Full Changelog**: [v2.3.3...v2.3.4](https://github.com/jlowin/fastmcp/compare/v2.3.3...v2.3.4)
+</Update>
 
+<Update label="v2.3.3" description="2024-05-10">
   ## [v2.3.3: SSE you later](https://github.com/jlowin/fastmcp/releases/tag/v2.3.3)
 
   This is a hotfix for a bug introduced in 2.3.2 that broke SSE servers
@@ -1424,7 +1490,9 @@ Source: https://gofastmcp.com/changelog
   * Add test for no prefix when importing by [@jlowin](https://github.com/jlowin) in [#404](https://github.com/jlowin/fastmcp/pull/404)
 
   **Full Changelog**: [v2.3.2...v2.3.3](https://github.com/jlowin/fastmcp/compare/v2.3.2...v2.3.3)
+</Update>
 
+<Update label="v2.3.2" description="2024-05-10">
   ## [v2.3.2: Stuck in the Middleware With You](https://github.com/jlowin/fastmcp/releases/tag/v2.3.2)
 
   ### New Features 🎉
@@ -1441,7 +1509,9 @@ Source: https://gofastmcp.com/changelog
   * Adding 23 tests for CLI by [@didier-durand](https://github.com/didier-durand) in [#394](https://github.com/jlowin/fastmcp/pull/394)
 
   **Full Changelog**: [v2.3.1...v2.3.2](https://github.com/jlowin/fastmcp/compare/v2.3.1...v2.3.2)
+</Update>
 
+<Update label="v2.3.1" description="2024-05-09">
   ## [v2.3.1: For Good-nests Sake](https://github.com/jlowin/fastmcp/releases/tag/v2.3.1)
 
   This release primarily patches a long-standing bug with nested ASGI SSE servers.
@@ -1467,7 +1537,9 @@ Source: https://gofastmcp.com/changelog
   * [@didier-durand](https://github.com/didier-durand) made their first contribution in [#385](https://github.com/jlowin/fastmcp/pull/385)
 
   **Full Changelog**: [v2.3.0...v2.3.1](https://github.com/jlowin/fastmcp/compare/v2.3.0...v2.3.1)
+</Update>
 
+<Update label="v2.3.0" description="2024-05-08">
   ## [v2.3.0: Stream Me Up, Scotty](https://github.com/jlowin/fastmcp/releases/tag/v2.3.0)
 
   ### New Features 🎉
@@ -1485,7 +1557,9 @@ Source: https://gofastmcp.com/changelog
   * Update transport documentation for streaming support by [@jlowin](https://github.com/jlowin) in [#369](https://github.com/jlowin/fastmcp/pull/369)
 
   **Full Changelog**: [v2.2.10...v2.3.0](https://github.com/jlowin/fastmcp/compare/v2.2.10...v2.3.0)
+</Update>
 
+<Update label="v2.2.10" description="2024-05-06">
   ## [v2.2.10: That's JSON Bourne](https://github.com/jlowin/fastmcp/releases/tag/v2.2.10)
 
   ### Fixes 🐞
@@ -1503,7 +1577,9 @@ Source: https://gofastmcp.com/changelog
   * [@alainivars](https://github.com/alainivars) made their first contribution in [#306](https://github.com/jlowin/fastmcp/pull/306)
 
   **Full Changelog**: [v2.2.9...v2.2.10](https://github.com/jlowin/fastmcp/compare/v2.2.9...v2.2.10)
+</Update>
 
+<Update label="v2.2.9" description="2024-05-06">
   ## [v2.2.9: Str-ing the Pot (Hotfix)](https://github.com/jlowin/fastmcp/releases/tag/v2.2.9)
 
   This release is a hotfix for the issue detailed in #330
@@ -1527,7 +1603,9 @@ Source: https://gofastmcp.com/changelog
   * [@discdiver](https://github.com/discdiver) made their first contribution in [#329](https://github.com/jlowin/fastmcp/pull/329)
 
   **Full Changelog**: [v2.2.8...v2.2.9](https://github.com/jlowin/fastmcp/compare/v2.2.8...v2.2.9)
+</Update>
 
+<Update label="v2.2.8" description="2024-05-05">
   ## [v2.2.8: Parse and Recreation](https://github.com/jlowin/fastmcp/releases/tag/v2.2.8)
 
   ### New Features 🎉
@@ -1551,7 +1629,9 @@ Source: https://gofastmcp.com/changelog
   * Dry out retrieving context kwarg by [@jlowin](https://github.com/jlowin) in [#316](https://github.com/jlowin/fastmcp/pull/316)
 
   **Full Changelog**: [v2.2.7...v2.2.8](https://github.com/jlowin/fastmcp/compare/v2.2.7...v2.2.8)
+</Update>
 
+<Update label="v2.2.7" description="2024-05-03">
   ## [v2.2.7: You Auth to Know Better](https://github.com/jlowin/fastmcp/releases/tag/v2.2.7)
 
   ### New Features 🎉
@@ -1573,7 +1653,9 @@ Source: https://gofastmcp.com/changelog
   * add readme to smarthome example by [@zzstoatzz](https://github.com/zzstoatzz) in [#294](https://github.com/jlowin/fastmcp/pull/294)
 
   **Full Changelog**: [v2.2.6...v2.2.7](https://github.com/jlowin/fastmcp/compare/v2.2.6...v2.2.7)
+</Update>
 
+<Update label="v2.2.6" description="2024-04-30">
   ## [v2.2.6: The REST is History](https://github.com/jlowin/fastmcp/releases/tag/v2.2.6)
 
   ### New Features 🎉
@@ -1601,7 +1683,9 @@ Source: https://gofastmcp.com/changelog
   * [@jeger-at](https://github.com/jeger-at) made their first contribution in [#278](https://github.com/jlowin/fastmcp/pull/278)
 
   **Full Changelog**: [v2.2.5...v2.2.6](https://github.com/jlowin/fastmcp/compare/v2.2.5...v2.2.6)
+</Update>
 
+<Update label="v2.2.5" description="2024-04-26">
   ## [v2.2.5: Context Switching](https://github.com/jlowin/fastmcp/releases/tag/v2.2.5)
 
   ### New Features 🎉
@@ -1616,7 +1700,9 @@ Source: https://gofastmcp.com/changelog
   * Significant documentation and test expansion for tool input types by [@jlowin](https://github.com/jlowin) in [#261](https://github.com/jlowin/fastmcp/pull/261)
 
   **Full Changelog**: [v2.2.4...v2.2.5](https://github.com/jlowin/fastmcp/compare/v2.2.4...v2.2.5)
+</Update>
 
+<Update label="v2.2.4" description="2024-04-25">
   ## [v2.2.4: The Wild Side, Actually](https://github.com/jlowin/fastmcp/releases/tag/v2.2.4)
 
   The wildcard URI templates exposed in v2.2.3 were blocked by a server-level check which is removed in this release.
@@ -1645,7 +1731,9 @@ Source: https://gofastmcp.com/changelog
   * [@cutekibry](https://github.com/cutekibry) made their first contribution in [#252](https://github.com/jlowin/fastmcp/pull/252)
 
   **Full Changelog**: [v2.2.3...v2.2.4](https://github.com/jlowin/fastmcp/compare/v2.2.3...v2.2.4)
+</Update>
 
+<Update label="v2.2.3" description="2024-04-25">
   ## [v2.2.3: The Wild Side](https://github.com/jlowin/fastmcp/releases/tag/v2.2.3)
 
   ### New Features 🎉
@@ -1662,7 +1750,9 @@ Source: https://gofastmcp.com/changelog
   * update version badges by [@jlowin](https://github.com/jlowin) in [#248](https://github.com/jlowin/fastmcp/pull/248)
 
   **Full Changelog**: [v2.2.2...v2.2.3](https://github.com/jlowin/fastmcp/compare/v2.2.2...v2.2.3)
+</Update>
 
+<Update label="v2.2.2" description="2024-04-24">
   ## [v2.2.2: Prompt and Circumstance](https://github.com/jlowin/fastmcp/releases/tag/v2.2.2)
 
   ### New Features 🎉
@@ -1682,7 +1772,9 @@ Source: https://gofastmcp.com/changelog
   * Add prompt tests by [@jlowin](https://github.com/jlowin) in [#239](https://github.com/jlowin/fastmcp/pull/239)
 
   **Full Changelog**: [v2.2.1...v2.2.2](https://github.com/jlowin/fastmcp/compare/v2.2.1...v2.2.2)
+</Update>
 
+<Update label="v2.2.1" description="2024-04-23">
   ## [v2.2.1: Template for Success](https://github.com/jlowin/fastmcp/releases/tag/v2.2.1)
 
   ### New Features 🎉
@@ -1702,7 +1794,9 @@ Source: https://gofastmcp.com/changelog
   * Add resource template tests by [@jlowin](https://github.com/jlowin) in [#233](https://github.com/jlowin/fastmcp/pull/233)
 
   **Full Changelog**: [v2.2.0...v2.2.1](https://github.com/jlowin/fastmcp/compare/v2.2.0...v2.2.1)
+</Update>
 
+<Update label="v2.2.0" description="2024-04-22">
   ## [v2.2.0: Compose Yourself](https://github.com/jlowin/fastmcp/releases/tag/v2.2.0)
 
   ### New Features 🎉
@@ -1730,7 +1824,9 @@ Source: https://gofastmcp.com/changelog
   * [@kongqi404](https://github.com/kongqi404) made their first contribution in [#181](https://github.com/jlowin/fastmcp/pull/181)
 
   **Full Changelog**: [v2.1.2...v2.2.0](https://github.com/jlowin/fastmcp/compare/v2.1.2...v2.2.0)
+</Update>
 
+<Update label="v2.1.2" description="2024-04-14">
   ## [v2.1.2: Copy That, Good Buddy](https://github.com/jlowin/fastmcp/releases/tag/v2.1.2)
 
   The main improvement in this release is a fix that allows FastAPI / OpenAPI-generated servers to be mounted as sub-servers.
@@ -1750,7 +1846,9 @@ Source: https://gofastmcp.com/changelog
   * Update pyproject.toml by [@jlowin](https://github.com/jlowin) in [#156](https://github.com/jlowin/fastmcp/pull/156)
 
   **Full Changelog**: [v2.1.1...v2.1.2](https://github.com/jlowin/fastmcp/compare/v2.1.1...v2.1.2)
+</Update>
 
+<Update label="v2.1.1" description="2024-04-14">
   ## [v2.1.1: Doc Holiday](https://github.com/jlowin/fastmcp/releases/tag/v2.1.1)
 
   FastMCP's docs are now available at gofastmcp.com.
@@ -1775,7 +1873,9 @@ Source: https://gofastmcp.com/changelog
   * Support openapi 3.0 and 3.1 by [@jlowin](https://github.com/jlowin) in [#147](https://github.com/jlowin/fastmcp/pull/147)
 
   **Full Changelog**: [v2.1.0...v2.1.1](https://github.com/jlowin/fastmcp/compare/v2.1.0...v2.1.1)
+</Update>
 
+<Update label="v2.1.0" description="2024-04-13">
   ## [v2.1.0: Tag, You're It](https://github.com/jlowin/fastmcp/releases/tag/v2.1.0)
 
   The primary motivation for this release is the fix in #128 for Claude desktop compatibility, but the primary new feature of this release is per-object tags. Currently these are for bookkeeping only but will become useful in future releases.
@@ -1802,7 +1902,9 @@ Source: https://gofastmcp.com/changelog
   * Clean up server tests by [@jlowin](https://github.com/jlowin) in [#125](https://github.com/jlowin/fastmcp/pull/125)
 
   **Full Changelog**: [v2.0.0...v2.1.0](https://github.com/jlowin/fastmcp/compare/v2.0.0...v2.1.0)
+</Update>
 
+<Update label="v2.0.0" description="2024-04-11">
   ## [v2.0.0: Second to None](https://github.com/jlowin/fastmcp/releases/tag/v2.0.0)
 
   ### New Features 🎉
@@ -1828,7 +1930,9 @@ Source: https://gofastmcp.com/changelog
   * FastMCP 2.0 by [@jlowin](https://github.com/jlowin) in [#119](https://github.com/jlowin/fastmcp/pull/119)
 
   **Full Changelog**: [v1.0...v2.0.0](https://github.com/jlowin/fastmcp/compare/v1.0...v2.0.0)
+</Update>
 
+<Update label="v1.0" description="2024-04-11">
   ## [v1.0: It's Official](https://github.com/jlowin/fastmcp/releases/tag/v1.0)
 
   This release commemorates FastMCP 1.0, which is included in the official Model Context Protocol SDK:
@@ -1852,7 +1956,9 @@ Source: https://gofastmcp.com/changelog
   * [@samihamine](https://github.com/samihamine) made their first contribution in [#77](https://github.com/jlowin/fastmcp/pull/77)
 
   **Full Changelog**: [v0.4.1...v1.0](https://github.com/jlowin/fastmcp/compare/v0.4.1...v1.0)
+</Update>
 
+<Update label="v0.4.1" description="2024-12-09">
   ## [v0.4.1: String Theory](https://github.com/jlowin/fastmcp/releases/tag/v0.4.1)
 
   ### Fixes 🐞
@@ -1873,7 +1979,9 @@ Source: https://gofastmcp.com/changelog
   * [@leonkozlowski](https://github.com/leonkozlowski) made their first contribution in [#67](https://github.com/jlowin/fastmcp/pull/67)
 
   **Full Changelog**: [v0.4.0...v0.4.1](https://github.com/jlowin/fastmcp/compare/v0.4.0...v0.4.1)
+</Update>
 
+<Update label="v0.4.0" description="2024-12-05">
   ## [v0.4.0: Nice to MIT You](https://github.com/jlowin/fastmcp/releases/tag/v0.4.0)
 
   This is a relatively small release in terms of features, but the version is bumped to 0.4 to reflect that the code is being relicensed from Apache 2.0 to MIT. This is to facilitate FastMCP's inclusion in the official MCP SDK.
@@ -1901,7 +2009,9 @@ Source: https://gofastmcp.com/changelog
   * [@sd2k](https://github.com/sd2k) made their first contribution in [#51](https://github.com/jlowin/fastmcp/pull/51)
 
   **Full Changelog**: [v0.3.5...v0.4.0](https://github.com/jlowin/fastmcp/compare/v0.3.5...v0.4.0)
+</Update>
 
+<Update label="v0.3.5" description="2024-12-03">
   ## [v0.3.5: Windows of Opportunity](https://github.com/jlowin/fastmcp/releases/tag/v0.3.5)
 
   This release is highlighted by the ability to handle complex JSON objects as MCP inputs and improved Windows compatibility.
@@ -1926,7 +2036,9 @@ Source: https://gofastmcp.com/changelog
   * [@jurasofish](https://github.com/jurasofish) made their first contribution in [#31](https://github.com/jlowin/fastmcp/pull/31)
 
   **Full Changelog**: [v0.3.4...v0.3.5](https://github.com/jlowin/fastmcp/compare/v0.3.4...v0.3.5)
+</Update>
 
+<Update label="v0.3.4" description="2024-12-02">
   ## [v0.3.4: URL's Well That Ends Well](https://github.com/jlowin/fastmcp/releases/tag/v0.3.4)
 
   ### Fixes 🐞
@@ -1935,7 +2047,9 @@ Source: https://gofastmcp.com/changelog
   * Remove BaseURL reference and use AnyURL by [@jlowin](https://github.com/jlowin) in [#40](https://github.com/jlowin/fastmcp/pull/40)
 
   **Full Changelog**: [v0.3.3...v0.3.4](https://github.com/jlowin/fastmcp/compare/v0.3.3...v0.3.4)
+</Update>
 
+<Update label="v0.3.3" description="2024-12-02">
   ## [v0.3.3: Dependence Day](https://github.com/jlowin/fastmcp/releases/tag/v0.3.3)
 
   ### New Features 🎉
@@ -1948,7 +2062,9 @@ Source: https://gofastmcp.com/changelog
   * add `Contributing` section to README by [@zzstoatzz](https://github.com/zzstoatzz) in [#32](https://github.com/jlowin/fastmcp/pull/32)
 
   **Full Changelog**: [v0.3.2...v0.3.3](https://github.com/jlowin/fastmcp/compare/v0.3.2...v0.3.3)
+</Update>
 
+<Update label="v0.3.2" date="2024-12-01" description="Green with ENVy">
   ## [v0.3.2: Green with ENVy](https://github.com/jlowin/fastmcp/releases/tag/v0.3.2)
 
   ### New Features 🎉
@@ -1960,7 +2076,9 @@ Source: https://gofastmcp.com/changelog
   * Remove top level env var by [@jlowin](https://github.com/jlowin) in [#28](https://github.com/jlowin/fastmcp/pull/28)
 
   **Full Changelog**: [v0.3.1...v0.3.2](https://github.com/jlowin/fastmcp/compare/v0.3.1...v0.3.2)
+</Update>
 
+<Update label="v0.3.1" description="2024-12-01">
   ## [v0.3.1](https://github.com/jlowin/fastmcp/releases/tag/v0.3.1)
 
   ### New Features 🎉
@@ -1978,7 +2096,9 @@ Source: https://gofastmcp.com/changelog
   * Remove log by [@jlowin](https://github.com/jlowin) in [#26](https://github.com/jlowin/fastmcp/pull/26)
 
   **Full Changelog**: [v0.3.0...v0.3.1](https://github.com/jlowin/fastmcp/compare/v0.3.0...v0.3.1)
+</Update>
 
+<Update label="v0.3.0" description="2024-12-01">
   ## [v0.3.0: Prompt and Circumstance](https://github.com/jlowin/fastmcp/releases/tag/v0.3.0)
 
   ### New Features 🎉
@@ -2013,16 +2133,21 @@ Source: https://gofastmcp.com/changelog
   * [@zzstoatzz](https://github.com/zzstoatzz) made their first contribution in [#17](https://github.com/jlowin/fastmcp/pull/17)
 
   **Full Changelog**: [v0.2.0...v0.3.0](https://github.com/jlowin/fastmcp/compare/v0.2.0...v0.3.0)
+</Update>
 
+<Update label="v0.2.0" description="2024-11-30">
   ## [v0.2.0](https://github.com/jlowin/fastmcp/releases/tag/v0.2.0)
 
   **Full Changelog**: [v0.1.0...v0.2.0](https://github.com/jlowin/fastmcp/compare/v0.1.0...v0.2.0)
+</Update>
 
+<Update label="v0.1.0" description="2024-11-30">
   ## [v0.1.0](https://github.com/jlowin/fastmcp/releases/tag/v0.1.0)
 
   The very first release of FastMCP! 🎉
 
   **Full Changelog**: [Initial commits](https://github.com/jlowin/fastmcp/commits/v0.1.0)
+</Update>
 
 
 # Bearer Token Authentication
@@ -2033,7 +2158,7 @@ Authenticate your FastMCP client with a Bearer token.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2127,7 +2252,7 @@ Authenticate your FastMCP client via OAuth 2.1.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2256,7 +2381,7 @@ Programmatic client for interacting with MCP servers through a well-typed, Pytho
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2556,7 +2681,7 @@ Handle server-initiated user input requests with structured schemas.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2687,7 +2812,7 @@ Receive and handle log messages from MCP servers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2806,7 +2931,7 @@ Handle MCP messages, requests, and notifications with custom message handlers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -2942,7 +3067,7 @@ Handle progress notifications from long-running server operations.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3017,7 +3142,7 @@ Use server-side prompt templates with automatic argument serialization.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3240,7 +3365,7 @@ Access static and templated resources from MCP servers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3451,7 +3576,7 @@ Provide local context and resource boundaries to MCP servers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3499,7 +3624,7 @@ Handle server-initiated LLM sampling requests.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3663,7 +3788,7 @@ Discover and execute server-side tools with the FastMCP client.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -3941,7 +4066,7 @@ Configure how FastMCP Clients connect to and communicate with servers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -4422,7 +4547,7 @@ Deploy your FastMCP server over HTTP for remote access
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -5297,7 +5422,7 @@ Use fastmcp.json for portable, declarative project configuration
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -7015,7 +7140,7 @@ Connect FastMCP servers to the Anthropic API
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -7248,7 +7373,7 @@ Secure your FastMCP server with Auth0 OAuth
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -7530,7 +7655,7 @@ Secure your FastMCP server with AuthKit by WorkOS
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -7670,7 +7795,7 @@ Secure your FastMCP server with AWS Cognito user pools
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -8042,7 +8167,7 @@ Secure your FastMCP server with Azure/Microsoft Entra OAuth
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -8548,7 +8673,7 @@ export const LocalFocusTip = () => {
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -8737,7 +8862,7 @@ export const LocalFocusTip = () => {
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -9044,7 +9169,7 @@ export const LocalFocusTip = () => {
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -9336,7 +9461,7 @@ Secure your FastMCP server with Descope
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -9628,7 +9753,7 @@ Integrate FastMCP with FastAPI applications
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -10087,7 +10212,7 @@ Connect FastMCP servers to the Google Gemini SDK
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -10205,7 +10330,7 @@ export const LocalFocusTip = () => {
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -10384,7 +10509,7 @@ Secure your FastMCP server with GitHub OAuth
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -10642,7 +10767,7 @@ Secure your FastMCP server with Google OAuth
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -10914,7 +11039,7 @@ Generate standard MCP configuration files for any compatible client
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -11356,7 +11481,7 @@ Connect FastMCP servers to the OpenAI API
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -11588,7 +11713,7 @@ Generate MCP servers from any OpenAPI specification
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -12427,7 +12552,7 @@ Secure your FastMCP server with Scalekit
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -12618,7 +12743,7 @@ Authenticate FastMCP servers with WorkOS Connect
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -12916,7 +13041,7 @@ Learn how to use the FastMCP command-line interface
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -13512,7 +13637,7 @@ Community-contributed modules extending FastMCP
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -13794,7 +13919,7 @@ Create enhanced tool variants with modified schemas, argument mappings, and cust
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -23795,7 +23920,7 @@ Secure your FastMCP server with flexible authentication patterns, from simple AP
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -24069,7 +24194,7 @@ Build a self-contained authentication system where your FastMCP server manages u
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -24310,7 +24435,7 @@ Bridge traditional OAuth providers to work seamlessly with MCP's authentication 
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -24913,7 +25038,7 @@ Bridge OIDC providers to work seamlessly with MCP's authentication flow.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -25163,7 +25288,7 @@ Integrate your FastMCP server with external identity providers like Descope, Wor
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -25397,7 +25522,7 @@ Protect your server by validating bearer tokens issued by external systems.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -25681,7 +25806,7 @@ Combine multiple FastMCP servers into a single, larger application using mountin
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -26061,7 +26186,7 @@ Access MCP capabilities like logging, progress, and resources within your MCP ob
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -26505,7 +26630,7 @@ Request structured input from users during tool execution through the MCP contex
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -26832,7 +26957,7 @@ Add visual icons to your servers, tools, resources, and prompts
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -26968,7 +27093,7 @@ Send log messages back to MCP clients through the context.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -27232,7 +27357,7 @@ Add cross-cutting functionality to your MCP server with middleware that can insp
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -27977,7 +28102,7 @@ Update clients on the progress of long-running operations through the MCP contex
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -28172,7 +28297,7 @@ Create reusable, parameterized prompt templates for MCP clients.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -28532,7 +28657,7 @@ Use FastMCP to act as an intermediary or change transport for other MCP servers.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -28892,7 +29017,7 @@ Expose data sources and dynamic content generators to your MCP client.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -29567,7 +29692,7 @@ Request LLM text generation from the client or a configured provider through the
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -29843,7 +29968,7 @@ The core FastMCP server class for building MCP applications with tools, resource
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -30293,7 +30418,7 @@ Configure persistent and distributed storage for caching and OAuth state managem
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -30571,7 +30696,7 @@ Expose functions as executable capabilities for your MCP client.
 export const VersionBadge = ({version}) => {
   return <code className="version-badge-container">
             <p className="version-badge">
-                <span className="version-badge-label">New in version:</span> 
+                <span className="version-badge-label">New in version:</span> 
                 <code className="version-badge-version">{version}</code>
             </p>
         </code>;
@@ -31440,10 +31565,13 @@ Source: https://gofastmcp.com/updates
 
 
 
+<Update label="FastMCP 2.12.5" description="October 17, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12.5: Safety Pin" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.5" cta="Read the release notes">
     Pins MCP SDK version below 1.17 to ensure the `.well-known` payload appears in the expected location when using FastMCP auth providers with composite applications.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.12.4" description="September 26, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12.4: OIDC What You Did There" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.4" cta="Read the release notes">
     FastMCP 2.12.4 adds comprehensive OIDC support and expands authentication options with AWS Cognito and Descope providers. The release also includes improvements to logging middleware, URL handling for nested resources, persistent OAuth client registration storage, and various fixes to the experimental OpenAPI parser.
 
@@ -31453,19 +31581,27 @@ Source: https://gofastmcp.com/updates
 
     🛠️ **Improved Reliability** through enhanced URL handling, persistent OAuth storage, and numerous parser fixes based on community feedback.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.12.3" description="September 17, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12.3: Double Time" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.3" cta="Read the release notes">
     FastMCP 2.12.3 focuses on performance and developer experience improvements. This release includes optimized auth provider imports that reduce server startup time, enhanced OIDC authentication flows, and automatic inline snapshot creation for testing.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.12.2" description="September 3, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12.2: Perchance to Stream" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.2" cta="Read the release notes">
     Hotfix for streamable-http transport validation in fastmcp.json configuration files, resolving a parsing error when CLI arguments were merged against the configuration spec.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.12.1" description="September 3, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12.1: OAuth to Joy" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.1" cta="Read the release notes">
     FastMCP 2.12.1 strengthens OAuth proxy implementation with improved client storage reliability, PKCE forwarding, configurable token endpoint authentication methods, and expanded scope handling based on extensive community testing.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.12" description="August 31, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.12: Auth to the Races" href="https://github.com/jlowin/fastmcp/releases/tag/v2.12.0" cta="Read the release notes">
     FastMCP 2.12 represents one of our most significant releases to date. After extensive testing and iteration with the community, we're shipping major improvements to authentication, configuration, and MCP feature adoption.
 
@@ -31475,7 +31611,9 @@ Source: https://gofastmcp.com/updates
 
     🧠 **Sampling API Fallback** tackles adoption challenges by letting servers generate completions server-side when clients don't support the feature, encouraging innovation while maintaining compatibility.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.11" description="August 1, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.11: Auth to a Good Start" href="https://github.com/jlowin/fastmcp/releases/tag/v2.11.0" cta="Read the release notes">
     FastMCP 2.11 brings enterprise-ready authentication and dramatic performance improvements.
 
@@ -31487,7 +31625,9 @@ Source: https://gofastmcp.com/updates
 
     This release emphasizes speed and simplicity while setting the foundation for future enterprise features.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.10" description="July 2, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.10: Great Spec-tations" href="https://github.com/jlowin/fastmcp/releases/tag/v2.10.0" cta="Read the release notes">
     FastMCP 2.10 achieves full compliance with the 6/18/2025 MCP specification update, introducing powerful new communication patterns.
 
@@ -31499,7 +31639,9 @@ Source: https://gofastmcp.com/updates
 
     This release includes a breaking change to `client.call_tool()` return signatures but significantly expands the interaction capabilities of MCP servers.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.9" description="June 23, 2025" tags={["Releases", "Blog Posts"]}>
   <Card title="FastMCP 2.9: MCP-Native Middleware" href="https://www.jlowin.dev/blog/fastmcp-2-9-middleware" img="https://jlowin.dev/_image?href=%2F_astro%2Fhero.BkVTdeBk.jpg&w=1200&h=630&f=png" cta="Read more">
     FastMCP 2.9 is a major release that, among other things, introduces two important features that push beyond the basic MCP protocol.
 
@@ -31509,7 +31651,9 @@ Source: https://gofastmcp.com/updates
 
     These features transform FastMCP from a simple protocol implementation into a powerful framework for building sophisticated MCP applications. Combined with the new `File` utility for binary data and improvements to authentication and serialization, this release makes FastMCP significantly more flexible and developer-friendly while maintaining full protocol compliance.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.8" description="June 11, 2025" tags={["Releases", "Blog Posts"]}>
   <Card title="FastMCP 2.8: Transform and Roll Out" href="https://www.jlowin.dev/blog/fastmcp-2-8-tool-transformation" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.su3kspkP.png&w=1000&h=500&f=webp" cta="Read more">
     FastMCP 2.8 is here, and it's all about taking control of your tools.
 
@@ -31529,7 +31673,9 @@ Source: https://gofastmcp.com/updates
 
     Lastly, to ensure maximum compatibility with the ecosystem, we've made the pragmatic decision to default all OpenAPI routes to Tools, making your entire API immediately accessible to any tool-using agent. When the industry catches up and supports resources, we'll restore the old default -- but no reason you should do extra work before OpenAI, Anthropic, or Google!
   </Card>
+</Update>
 
+<Update label="FastMCP 2.7" description="June 6, 2025" tags={["Releases"]}>
   <Card title="FastMCP 2.7: Pare Programming" href="https://github.com/jlowin/fastmcp/releases/tag/v2.7.0" img="https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=20d59e8a64fc284178c5e5ecf581a816" cta="Read the release notes" data-og-width="1536" width="1536" data-og-height="768" height="768" data-path="assets/updates/release-2-7.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=280&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=6d22dcaa872f3ce687ae9d8bd865e595 280w, https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=560&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=2393896ee5101c0e06a85305ef58a96f 560w, https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=840&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=ce29487fff4f19b7d1df348be7d48cd5 840w, https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=1100&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=ba687b05dc5fae86850b1a97992eddd8 1100w, https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=1650&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=ea4653b2502dcb210d567b4786b9d3a8 1650w, https://mintcdn.com/fastmcp/hUosZw7ujHZFemrG/assets/updates/release-2-7.png?w=2500&fit=max&auto=format&n=hUosZw7ujHZFemrG&q=85&s=c5a12ba96fb8eabe2efe085ce4586be6 2500w">
     FastMCP 2.7 has been released!
 
@@ -31547,46 +31693,64 @@ Source: https://gofastmcp.com/updates
 
     The bulk of the update is focused on improving the FastMCP internals, including a few breaking internal changes to private APIs. A number of functions that have clung on since 1.0 are now deprecated.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.6" description="June 2, 2025" tags={["Releases", "Blog Posts"]}>
   <Card title="FastMCP 2.6: Blast Auth" href="https://www.jlowin.dev/blog/fastmcp-2-6" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.Bsu8afiw.png&w=1000&h=500&f=webp" cta="Read more">
     FastMCP 2.6 is here!
 
     This release introduces first-class authentication for MCP servers and clients, including pragmatic Bearer token support and seamless OAuth 2.1 integration. This release aligns with how major AI platforms are adopting MCP today, making it easier than ever to securely connect your tools to real-world AI models. Dive into the update and secure your stack with minimal friction.
   </Card>
+</Update>
 
+<Update description="May 21, 2025" label="Vibe-Testing" tags={["Blog Posts", "Tutorials"]}>
   <Card title="Stop Vibe-Testing Your MCP Server" href="https://www.jlowin.dev/blog/stop-vibe-testing-mcp-servers" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.BUPy9I9c.png&w=1000&h=500&f=webp" cta="Read more">
     Your tests are bad and you should feel bad.
 
     Stop vibe-testing your MCP server through LLM guesswork. FastMCP 2.0 introduces in-memory testing for fast, deterministic, and fully Pythonic validation of your MCP logic—no network, no subprocesses, no vibes.
   </Card>
+</Update>
 
+<Update description="May 8, 2025" label="10,000 Stars" tags={["Blog Posts"]}>
   <Card title="Reflecting on FastMCP at 10k stars 🌟" href="https://www.jlowin.dev/blog/fastmcp-2-10k-stars" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.Cnvci9Q_.png&w=1000&h=500&f=webp" cta="Read more">
     In just six weeks since its relaunch, FastMCP has surpassed 10,000 GitHub stars—becoming the fastest-growing OSS project in our orbit. What started as a personal itch has become the backbone of Python-based MCP servers, powering a rapidly expanding ecosystem. While the protocol itself evolves, FastMCP continues to lead with clarity, developer experience, and opinionated tooling. Here’s to what’s next.
   </Card>
+</Update>
 
+<Update description="May 8, 2025" label="FastMCP 2.3" tags={["Blog Posts", "Releases"]}>
   <Card title="Now Streaming: FastMCP 2.3" href="https://www.jlowin.dev/blog/fastmcp-2-3-streamable-http" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.M_hv6gEB.png&w=1000&h=500&f=webp" cta="Read more">
     FastMCP 2.3 introduces full support for Streamable HTTP, a modern alternative to SSE that simplifies MCP deployments over the web. It’s efficient, reliable, and now the default HTTP transport. Just run your server with transport="http" and connect clients via a standard URL—FastMCP handles the rest. No special setup required. This release makes deploying MCP servers easier and more portable than ever.
   </Card>
+</Update>
 
+<Update description="April 23, 2025" label="Proxy Servers" tags={["Blog Posts", "Tutorials"]}>
   <Card title="MCP Proxy Servers with FastMCP 2.0" href="https://www.jlowin.dev/blog/fastmcp-proxy" img="https://www.jlowin.dev/_image?href=%2F_astro%2Frobot-hero.DpmAqgui.png&w=1000&h=500&f=webp" cta="Read more">
     Even AI needs a good travel adapter 🔌
 
     FastMCP now supports proxying arbitrary MCP servers, letting you run a local FastMCP instance that transparently forwards requests to any remote or third-party server—regardless of transport. This enables transport bridging (e.g., stdio ⇄ SSE), simplified client configuration, and powerful gateway patterns. Proxies are fully composable with other FastMCP servers, letting you mount or import them just like local servers. Use `FastMCP.from_client()` to wrap any backend in a clean, Pythonic proxy.
   </Card>
+</Update>
 
+<Update label="FastMCP 2.0" description="April 16, 2025" tags={["Releases", "Blog Posts"]}>
   <Card title="Introducing FastMCP 2.0 🚀" href="https://www.jlowin.dev/blog/fastmcp-2" img="https://www.jlowin.dev/_image?href=%2F_astro%2Fhero.DpbmGNrr.png&w=1000&h=500&f=webp" cta="Read more">
     This major release reimagines FastMCP as a full ecosystem platform, with powerful new features for composition, integration, and client interaction. You can now compose local and remote servers, proxy arbitrary MCP servers (with transport translation), and generate MCP servers from OpenAPI or FastAPI apps. A new client infrastructure supports advanced workflows like LLM sampling.
 
     FastMCP 2.0 builds on the success of v1 with a cleaner, more flexible foundation—try it out today!
   </Card>
+</Update>
 
+<Update label="Official SDK" description="December 3, 2024" tags={["Announcements"]}>
   <Card title="FastMCP is joining the official MCP Python SDK!" href="https://bsky.app/profile/jlowin.dev/post/3lch4xk5cf22c" icon="sparkles" cta="Read the announcement">
     FastMCP 1.0 will become part of the official MCP Python SDK!
   </Card>
+</Update>
 
+<Update label="FastMCP 1.0" description="December 1, 2024" tags={["Releases", "Blog Posts"]}>
   <Card title="Introducing FastMCP 🚀" href="https://www.jlowin.dev/blog/introducing-fastmcp" img="https://www.jlowin.dev/_image?href=%2F_astro%2Ffastmcp.Bep7YlTw.png&w=1000&h=500&f=webp" cta="Read more">
     Because life's too short for boilerplate.
 
     This is where it all started. FastMCP’s launch post introduced a clean, Pythonic way to build MCP servers without the protocol overhead. Just write functions; FastMCP handles the rest. What began as a weekend project quickly became the foundation of a growing ecosystem.
   </Card>
+</Update>
 
+`````
